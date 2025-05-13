@@ -1,3 +1,5 @@
+package Chapter1;
+
 public class PrintTable {
     public static void main(String[] args) {
         System.out.println("aa^22a^3a^4");
