@@ -9,20 +9,28 @@ public class AllStarCodeChallenge8 {
         String[] lengthStr = str.split("");
         int strLength = lengthStr.length;
         int count = 0;
+
+
         for (int i = 0; i < strLength; i++ ){
-            System.out.println(lengthStr[i]);
-            if(str.charAt(i) == ' '){
-                count = 0;
+            if(str.isEmpty()){
+                return 0;
+
             }
-            if(str.charAt(i) == letter){
+            if (str.charAt(i) == letter){
                 count++;
             }
+
+
+
         }
+
         return count;
     }
 
     public static void main(String[] args) {
-//        System.out.println(strCount("adeeeee", 'e'));
-        System.out.println(strCount("hello", ' '));
+        System.out.println(strCount("adeeeee", 'e'));
+        System.out.println(strCount("Hello", 'l'));
+        System.out.println(strCount("H", 'l'));
+        System.out.println(strCount("", 'z'));
     }
 }
