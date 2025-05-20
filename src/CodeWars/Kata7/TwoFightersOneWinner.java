@@ -8,7 +8,7 @@ public class TwoFightersOneWinner {
         if(firstAttacker.contentEquals(fighter1.name)){
             while (fighter1.health > 0 && fighter2.health > 0){
                 fighter2.health  = fighter2.health - fighter1.damagePerAttack;
-                System.out.println(fighter1.name + " Attacks " + fighter2.name + " " + fighter2.name + " now has " + fighter2.health + " health");
+                System.out.println(STR."\{fighter1.name} Attacks \{fighter2.name} \{fighter2.name} now has \{fighter2.health} health");
 
                 if(fighter2.health <= 0){
                     break;
