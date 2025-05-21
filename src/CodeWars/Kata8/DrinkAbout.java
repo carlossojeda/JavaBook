@@ -11,7 +11,7 @@ public class DrinkAbout {
         else if (age < 18){
             message = "drink coke";
         }
-        else if (age >= 18 && age < 21){
+        else if (age < 21){
             message = "drink beer";
         }
         else {
