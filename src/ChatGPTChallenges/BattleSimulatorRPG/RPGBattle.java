@@ -21,6 +21,12 @@ public class RPGBattle {
                         "\n 2.- warrior " + "Salud: " + warrior.health + " "+  "Poder de ataque: " + warrior.powerAttack + " " + "Defensa: " + warrior.defense + " " + "Velocidad: " + warrior.speed + " " +
                     "   \n 3.- assassin " + "Salud: " + assassin.health + " "+  "Poder de ataque: " + assassin.powerAttack + " " + "Defensa: " + assassin.defense + " " + "Velocidad: " + assassin.speed + " ");
 
+        int seleccion = sc.nextInt();
+        if(seleccion == 1){
+            String jugador = wizard.toString();
+            System.out.println(jugador);
+        }
+
     }
 
 
