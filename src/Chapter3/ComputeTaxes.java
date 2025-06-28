@@ -35,6 +35,57 @@ public class ComputeTaxes {
             } else
                 tax = 8350 * .10 + (33950 - 8350) * .15 + (82250 - 33950) * .25 + (171550 - 82250 ) * .28 + (372950 - 171550) * .33 + (userIncome - 372950) * .35;
         }
-        System.out.println(tax);
+        else if(userFiler == 1){
+                if(userIncome <= 16700){
+                    tax = userIncome * .10;
+                } else if (userIncome <= 67900){
+                    tax = 16700 * .10 + (userIncome - 16700) * .15;
+                } else if(userIncome <= 137050){
+                    tax = 16700 * .10 + (67900 - 16700) * .15 + (userIncome - 67900) * .25;
+                } else if(userIncome <= 208850){
+                    tax = 16700 * .10 + (67900 - 16700) * .15 + (137050 - 67900) * .25 + (userIncome - 137050) * .28;
+                } else if (userIncome <= 372950){
+                    tax = 16700 * .10 + (67900 - 16700) * .15 + (137050 - 67900) * .25 + (208850 - 137050) * .28 + (userIncome - 208850) * .33;
+                } else {
+                    tax = 16700 * .10 + (67900 - 16700) * .15 + (137050 - 67900) * .25 + (208850 - 137050) * .28 + (372950 - 208850) * .33 + (userIncome - 372950) * .35;
+                }
+        }
+        else if(userFiler == 2){
+            if(userIncome <= 8350){
+                tax = userIncome * .10;
+            } else if (userIncome <= 33950){
+                tax = 8350 * .10 + (userIncome - 8350) * .15;
+            } else if (userIncome <= 68525){
+                tax = userIncome * .10 + (33950 - 8350) * .15 + (userIncome - 33950) * .25;
+            } else if (userIncome <= 104425){
+                tax = userIncome * .10 + (33950 - 8350) * .15 + (68525 - 33950) * .25 + (userIncome - 68525) * .28;
+            } else if (userIncome <= 186475){
+                tax = userIncome * .10 + (33950 - 8350) * .15 + (68525 - 33950) * .25 + (104425 - 68525) * .28 + (userIncome - 68525) * .33;
+            } else
+                tax = userIncome * .10 + (33950 - 8350) *  .15 + (68252 - 33950) * .25 + (104425 - 68525) * .28 + (186475 - 104425) *.33 + (userIncome - 186475) * .35;
+        }
+        else if(userFiler == 3){
+            if(userIncome <= 11950){
+                tax = userIncome * .10;
+            } else if (userIncome <= 45500){
+                tax = 11950 * .10 + (userIncome - 11950) * .15;
+            } else if (userIncome <= 117450){
+                tax = 11950 * .10 + (45500 - 11950) * .15 + (userIncome - 45500) * .25;
+            } else if (userIncome <= 190200){
+                tax = 11950 * .10 + (45500 - 11950) * .15 + (117450 - 45500) * .25 + (userIncome - 117450) * .28;
+            } else if(userIncome <= 372950){
+                tax = 11950 * .10 + (45500 - 11950) * .15 + (117450 - 45500) * .25 + (190200 - 117450) * .28 + (userIncome - 190200) * .33;
+            } else {
+                tax = 11950 * .10 + (45500 - 11950) * .15 + (117450 - 45500) * .25 + (190200 - 117450) * .28 + (372950 - 190200) * .33 + (userIncome - 372950) * .35;
+            }
+
+        } else {
+            System.out.println("Error: invalid status");
+            System.exit(1);
+        }
+
+
+        System.out.println("Tax is " + (int) (tax * 100 / 100));
     }
+
 }
