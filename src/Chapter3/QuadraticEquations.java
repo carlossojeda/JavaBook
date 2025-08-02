@@ -22,6 +22,6 @@ public class QuadraticEquations {
         } else if (discriminant == 0) {
             double root = -b / (2 * a);
             System.out.println("The equation has one root: " + root);
-        } else System.out.println("The equiation has no real roots");
+        } else System.out.println("The equation has no real roots");
     }
 }
