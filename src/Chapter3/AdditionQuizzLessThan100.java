@@ -14,7 +14,7 @@ public class AdditionQuizzLessThan100 {
 
 
 
-        for(int i = 0; points <= maximumScore; i++){
+        for(; points <= maximumScore; ){
 
             int randomNumber1 = (int) (Math.random() * 100);
             int randomNumber2 = (int) (Math.random() * 100);
