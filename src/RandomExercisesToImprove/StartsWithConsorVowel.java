@@ -1,26 +1,43 @@
 package RandomExercisesToImprove;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StartsWithConsorVowel {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter a phrase or word");
-        String sentence = sc.next();
-        System.out.println(sentence);
-        int lenghtSentence = sentence.length();
-        String sentceLower = sentence.toLowerCase();
+        System.out.println("Enter a phrase");
+        String phrase = sc.nextLine();
+        phrase = phrase.toLowerCase();
+        int phraseLength = phrase.length();
+        int vowels = 0;
+        int consonants = 0;
 
-        int vowelStart = 0;
+        boolean startWord = true;
 
-        System.out.println(lenghtSentence);
+        for(int i = 0; i < phraseLength; i++){
+            char c = phrase.charAt(i);
 
-        for (int i = 0; i < lenghtSentence; i++){
-            if(sentceLower.startsWith("a") || sentceLower.startsWith("e") || sentceLower.startsWith("i") || sentceLower.startsWith("o")){
+            if(startWord && c >= 'a' && c <= 'z'){
+                if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                    vowels++;
+            } else {
+                consonants++;
+            } startWord = false;
 
+
+
+
+            if(c == ' '){
+                startWord = true;
             }
         }
+            System.out.println("vowels = " + vowels);
+            System.out.println("consonants = " + consonants);
+
+
+
 
     }
 }
