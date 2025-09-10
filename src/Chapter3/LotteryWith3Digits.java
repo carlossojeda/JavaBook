@@ -9,7 +9,7 @@ public class LotteryWith3Digits {
         Scanner sc = new Scanner(System.in);
 
 //        int lotteryNumber = (int) (100 + Math.random() * 100);
-        int lotteryNumber = 654;
+        int lotteryNumber = 157;
         int lotteryNumber1 = lotteryNumber / 100;
         int lotteryNumber2 = (lotteryNumber % 100) / 10;
         int lotteryNumber3 = lotteryNumber % 10;
@@ -30,11 +30,10 @@ public class LotteryWith3Digits {
 
             System.out.println("Congratulations, you have won 3,000 usd");
         }
-//        else if( userNumber1 == lotteryNumber1 || userNumber1 == lotteryNumber3 || userNumber2 == lotteryNumber1 || userNumber2 == lotteryNumber2 || userNumber2 == lotteryNumber3 || userNumber3 == lotteryNumber3){
-//            System.out.println("You have won 1,000 usd");
-//        }
-
-
-
+        else if (userNumber1 == lotteryNumber1 || userNumber1 == lotteryNumber2 || userNumber1 == lotteryNumber3 || userNumber2 == lotteryNumber1 || userNumber2 == lotteryNumber2 || userNumber2 == lotteryNumber3 || userNumber3 == lotteryNumber1 || userNumber3 == lotteryNumber2 || userNumber3 == lotteryNumber3){
+            System.out.println("Congratulations, You have won 1,000 usd");
+        } else {
+            System.out.println("Luck next time!, you have 0 right number, the machine number was: " + lotteryNumber);
+        }
     }
 }
