@@ -24,9 +24,17 @@ public class AfewExercisesOfChapter4_2_1 {
         System.out.println("Math.asin(Math.sin(Math.PI / 6)) = " + Math.asin(Math.sin(Math.PI / 6)));
         System.out.println("Math.sin(Math.asin(Math.PI / 6)) = " + Math.sin(Math.asin(Math.PI / 6)));
 
-        System.out.println("\"\\u6B22\\u8FCE.\"  = " + "\u6B22\u8FCE." );
+        System.out.println("\"\\u6B22\\u8FCE.q\"  = " + "\u6B22\u8FCE" );
         
 
-        
+        char ch = (char) 65.25;
+        System.out.println("ch = " + ch);
+
+        int i = (int) 'A';
+        System.out.println("i = " + i);
+
+//        byte b = '\uFFF4';
+        byte b = (byte) '\uFFF4';
+        System.out.println("b = " + b);
     }
 }
